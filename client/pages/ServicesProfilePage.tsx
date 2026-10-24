@@ -402,7 +402,7 @@ const ServicesProfilePage = () => {
   };
 
   const displayedAvailablePoints = rewardsBalance?.organizationId === tenant?.organizationId
-    ? rewardsBalance.availablePoints
+    ? rewardsBalance?.availablePoints ?? 0
     : rewardsSummary?.availablePoints ?? 0;
 
   useEffect(() => {
